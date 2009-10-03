@@ -4,10 +4,28 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery :only => [:create, :update, :destroy]
   layout 'application'
+  before_filter :set_locale
 
   def authenticate_with_api_key
     api_key = request.headers["Authorization"] || params[:api_key]
     self.current_user = User.find_by_api_key(api_key)
+  end
+
+  def set_locale
+    user_locales = request.env['HTTP_ACCEPT_LANGUAGE'].split(',').map do |l|
+      l.split(';')
+    end.sort_by do |k,v|
+      v || 'q=1.0'
+    end.map do |l|
+      l[0].to_sym
+    end.reverse
+
+    user_locales.each do |locale|
+      if I18n.available_locales.include? locale
+        I18n.locale = locale
+        break
+      end
+    end
   end
 
   def verify_authenticated_user
