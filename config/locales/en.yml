@@ -1,5 +1,29 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  all_gems:    "all gems"
+  dashboard:   "dashboard"
+  home:        "Home"
+  logout:      "logout"
+  search:      "search"
+  search_gems: "Search gems&hellip;"
+  sign_in:     "sign in"
+  sign_up:     "sign up"
+
+  dashboards:
+    show:
+      creating:         "creating"
+      latest_updates:   "Latest Updates"
+      gem_page:         "gem page"
+      migrating:        "migrating"
+      my_gems:          "My gems"
+      my_subscriptions: "My subscriptions"
+      no_gems:          "You haven't pushed any gems yet. Perhaps check out the guides on {{creating}} a gem or {{migrating}} a gem from RubyForge."
+      no_subscriptions: "You're not subscribed to any gems yet. Visit a {{gem_page}} to subscribe to one!"
+
+  home:
+    index:
+      blurb:           "<strong>Welcome to your community RubyGem host.</strong><br />Find your gems easier, publish them faster, and have fun doing it."
+      just_updated:    "Just Updated"
+      most_downloaded: "Most Downloaded"
+      new_gems:        "New Gems"
+
+  time_ago: "{{time}} ago"

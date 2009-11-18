@@ -4,8 +4,7 @@
     cut since july 2009
   </div>
   <div class="blurb">
-    <strong>Welcome to your community RubyGem host.</strong>
-    <br />Find your gems easier, publish them faster, and have fun doing it.
+    <%= t('.blurb') %>
   </div>
 <% end %>
 
@@ -44,7 +43,7 @@
 </p>
 <div class="leaderboards">
   <div class="grid_3" id="new_gems">
-    <strong>New Gems</strong>
+    <strong><%= t('.new_gems') %></strong>
     <ol>
       <% @latest.each do |rubygem| %>
         <li>
@@ -54,7 +53,7 @@
     </ol>
   </div>
   <div class="grid_3" id="most_downloaded">
-    <strong>Most Downloaded</strong>
+    <strong><%= t('.most_downloaded') %></strong>
     <ol>
       <% @downloaded.each do |rubygem| %>
         <li>
@@ -64,7 +63,7 @@
     </ol>
   </div>
   <div class="grid_3" id="just_updated">
-    <strong>Just Updated</strong>
+    <strong><%= t('.just_updated') %></strong>
     <ol>
       <% @updated.each do |version| %>
         <li>
