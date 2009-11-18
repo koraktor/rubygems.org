@@ -1,0 +1,71 @@
+de:
+  all_gems:    "alle gems"
+  dashboard:   "dashboard"
+  home:        "Startseite"
+  logout:      "abmelden"
+  search:      "Suche"
+  search_gems: "Gems durchsuchen&hellip;"
+  sign_in:     "anmelden"
+  sign_up:     "registrieren"
+
+  dashboards:
+    show:
+      creating:         "Erstellen"
+      latest_updates:   "Letzte Updates"
+      gem_page:         "Gem-Seite"
+      migrating:        "Migrieren"
+      my_gems:          "Meine Gems"
+      my_subscriptions: "Meine Abonnements"
+      no_gems:          "Du hast noch keine Gems hochgeladen. Werf vielleicht einen Blick auf die Anleitungen zum {{creating}} eines Gems oder das {{migrating}} eines Gems von RubyForge."
+      no_subscriptions: "Du hast noch keine Gems abonniert. Besuche eine {{gem_page}} um eins zu abonnieren!"
+
+  home:
+    index:
+      blurb:           "<strong>Willkommen zu deinem Community-RubyGem-Host.</strong><br />Finde deine Gems leichter, veröffentliche sie schneller und hab' Spaß dabei."
+      just_updated:    "Gerade aktualisiert"
+      most_downloaded: "Am meisten runtergeladen"
+      new_gems:        "Neue Gems"
+
+  time_ago: "vor {{time}}"
+  datetime:
+    distance_in_words:
+      half_a_minute: "eine halbe Minute"
+      less_than_x_seconds:
+        one:   "weniger als 1 Sekunde"
+        other: "weniger als {{count}} Sekunden"
+      x_seconds:
+        one:   "1 Sekunde"
+        other: "{{count}} Sekunden"
+      less_than_x_minutes:
+        one:   "weniger als 1 Minute"
+        other: "weniger als {{count}} Minuten"
+      x_minutes:
+        one:   "1 Minute"
+        other: "{{count}} Minuten"
+      about_x_hours:
+        one:   "ungefähr eine Stunde"
+        other: "ungefähr {{count}} Stunden"
+      x_days:
+        one:   "1 Tag"
+        other: "{{count}} Tage"
+      about_x_months:
+        one:   "ungefähr 1 Monat"
+        other: "ungefähr {{count}} Monate"
+      x_months:
+        one:   "1 Monat"
+        other: "{{count}} Monate"
+      about_x_years:
+        one:   "ungefähr 1 Jahr"
+        other: "ungefähr {{count}} Jahre"
+      over_x_years:
+        one:   "über 1 Jahr"
+        other: "über {{count}} Jahre"
+      almost_x_years:
+        one:   "fast 1 Jahr"
+        other: "fast {{count}} Jahre"
+
+  number:
+    format:
+      separator: ","
+      delimiter: "."
+      precision: 2
