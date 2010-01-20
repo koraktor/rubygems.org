@@ -1,6 +1,6 @@
-<% @title = "all versions of #{@rubygem.name}" %>
+<% @title = t('.all_versions', :gem => @rubygem.name) %>
 <p>
-<%= @versions.size %> versions since <%= @rubygem.versions.first.built_at_date %>
+  <%= t('.versions_since', :count => @versions.size, :first_date => l(@rubygem.versions.first.built_at.to_date, :format => :long)) %>
 </p>
 <div class="versions">
   <ol>

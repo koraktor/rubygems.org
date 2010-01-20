@@ -1,6 +1,6 @@
 <li>
   <%= link_to version.number, rubygem_version_url(version.rubygem, version.slug) %>
-  <small><%= version.built_at_date %></small>
+  <small><%= l(version.built_at.to_date, :format => :long) %></small>
   <% if version.platformed? %>
     <span class="platform"><%= version.platform %></span>
   <% end %>

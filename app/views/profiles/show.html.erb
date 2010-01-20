@@ -1,12 +1,13 @@
-<h3>Your Profile</h3>
+<h3><%= t('.your_gravatar') %></h3>
 
-<p>Your Gravatar: <%= image_tag current_user.gravatar_url(:size => 60), :id => 'profile_gravatar' %> (change it at <%= link_to 'gravatar.com', 'http://www.gravatar.com' %>)</p>
+<p><%= t('.your_gravatar') %>: <%= image_tag current_user.gravatar_url(:size => 60), :id => 'profile_gravatar' %> (<%= t('.change_gravatar', :link => link_to('gravatar.com', 'http://www.gravatar.com')) %>)</p>
 
-<p>Your API key is <strong><%= @user.api_key %></strong>. <br />
-Your <code>~/.gem/credentials</code> file should look like this to use the <%= link_to "gem commands", page_url("gem_docs") %>:</p>
+<p><%= t('.api_key', :api_key => @user.api_key) %>. <br />
+<%= t('.gem_credentials', :gem_commands => link_to(t('.gem_commands'), page_url("gem_docs"))) %>:
+</p>
 
 <pre><code>---
 :rubygems_api_key: <%= @user.api_key %></code></pre>
 
-<p><%= button_to "Reset my API key", reset_api_v1_api_key_path, 
-        :method => :put, :confirm => "Are you sure? This cannot be undone." %></p>
+<p><%= button_to t('.reset_api_key'), reset_api_v1_api_key_path,
+        :method => :put, :confirm => t('.are_you_sure') %></p>

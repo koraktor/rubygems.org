@@ -1,12 +1,14 @@
 de:
-  all_gems:    "alle gems"
-  dashboard:   "dashboard"
-  home:        "Startseite"
-  logout:      "abmelden"
-  search:      "Suche"
-  search_gems: "Gems durchsuchen&hellip;"
-  sign_in:     "anmelden"
-  sign_up:     "registrieren"
+  all_gems:          "alle gems"
+  dashboard:         "dashboard"
+  home:              "Startseite"
+  logout:            "abmelden"
+  please_wait:       "Bitte warten..."
+  rubyforge_account: "Du kannst dich jetzt auch mit deinem <a href=\"http://update.gemcutter.org/2009/12/10/rubyforge-accounts-migrated.html\">RubyForge-Account</a> anmelden!"
+  search:            "Suche"
+  search_gems:       "Gems durchsuchen&hellip;"
+  sign_in:           "anmelden"
+  sign_up:           "registrieren"
 
   dashboards:
     show:
@@ -26,7 +28,52 @@ de:
       most_downloaded: "Am meisten runtergeladen"
       new_gems:        "Neue Gems"
 
+  profiles:
+    show:
+      api_key:         "Dein API-Schlüssel ist <strong>{{api_key}}</strong>"
+      are_you_sure:    "Bist du sicher? Dies kann nicht rückgängig gemacht werden."
+      change_gravatar: "ändere ihn unter {{link}}"
+      gem_commands:    "Gem-Befehle"
+      gem_credentials: "Deine <code>~/.gem/credentials</code> Datei sollte folgendermaßen aussehen, damit du die {{gem_commands}} nutzen kannst"
+      reset_api_key:   "Meinen API-Schlüssel zurücksetzen"
+      your_gravatar:   "Dein Gravatar"
+      your_profile:    "Dein Profil"
+
+  searches:
+    new:
+      exact_match: "Exakte Treffer"
+      subtitle:    "für <em>#{h(params[:query])}</em>"
+
+  sessions:
+    new:
+      forgot_password: "Passwort vergessen?"
+    sign_in:           "Anmelden"
+
+  users:
+    new:
+      already_registered: "Hast du bereits einen Account?"
+      
+      sign_up:            "Registrieren"
+      
+  versions:
+    index:
+      all_versions:   "alle versionen von {{gem}}"
+      versions_since: "{{count}} Versionen seit {{first_date}}"
+
   time_ago: "vor {{time}}"
+  
+  date:
+    formats:
+      default: "%d. %m. %Y"
+      short: "%d. %b"
+      long: "%d. %B %Y"
+
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [so, Mo, Di, Mi, Do, Fr, Sa]
+
+    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
+  
   datetime:
     distance_in_words:
       half_a_minute: "eine halbe Minute"
@@ -63,6 +110,14 @@ de:
       almost_x_years:
         one:   "fast 1 Jahr"
         other: "fast {{count}} Jahre"
+
+  time:
+    formats:
+      default: "%a, %d. %b %Y, %H:%M:%S %z"
+      short: "%d. %b, %H:%M"
+      long: "%d. %b %Y, %H:%M"
+    am: ""
+    pm: ""
 
   number:
     format:

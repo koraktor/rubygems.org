@@ -1,12 +1,14 @@
 en:
-  all_gems:    "all gems"
-  dashboard:   "dashboard"
-  home:        "Home"
-  logout:      "logout"
-  search:      "search"
-  search_gems: "Search gems&hellip;"
-  sign_in:     "sign in"
-  sign_up:     "sign up"
+  all_gems:          "all gems"
+  dashboard:         "dashboard"
+  home:              "Home"
+  logout:            "logout"
+  please_wait:       "Please wait..."
+  rubyforge_account: "You can now sign in with your <a href=\"http://update.gemcutter.org/2009/12/10/rubyforge-accounts-migrated.html\">RubyForge Account too!</a>"
+  search:            "search"
+  search_gems:       "Search gems&hellip;"
+  sign_in:           "sign in"
+  sign_up:           "sign up"
 
   dashboards:
     show:
@@ -25,5 +27,36 @@ en:
       just_updated:    "Just Updated"
       most_downloaded: "Most Downloaded"
       new_gems:        "New Gems"
+
+  profiles:
+    show:
+      api_key:         "Your API key is <strong>{{api_key}}</strong>"
+      are_you_sure:    "Are you sure? This cannot be undone."
+      change_gravatar: "change it at {{link}}"
+      gem_commands:    "gem commands"
+      gem_credentials: "Your <code>~/.gem/credentials</code> file should look like this to use the {{gem_commands}}"
+      reset_api_key:   "Reset my API key"
+      your_gravatar:   "Your Gravatar"
+      your_profile:    "Your Profile"
+
+  searches:
+    new:
+      exact_match: "Exact match"
+      subtitle:    "for <em>#{h(params[:query])}</em>"
+      
+  sessions:
+    new:
+      forgot_password: "Forgot password?"
+      sign_in:         "Sign in"
+
+  users:
+    new:
+      already_registered: "Already have an account?"
+      sign_up:            "Sign up"
+
+  versions:
+    index:
+      all_versions:   "all versions of {{gem}}"
+      versions_since: "{{count}} versions since {{first_date}}"
 
   time_ago: "{{time}} ago"

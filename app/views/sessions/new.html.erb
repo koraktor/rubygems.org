@@ -1,9 +1,9 @@
-<% @title = "sign in" %>
+<% @title = t(:sign_in) %>
   <div class="form_links sign_in_links">
     <div class="rubyforge_migrate">
-      You can now sign in with your <%= link_to "RubyForge Account too!", "http://update.gemcutter.org/2009/12/10/rubyforge-accounts-migrated.html" %>
+      <%= t(:rubyforge_account) %>
     </div>
-    <%= link_to "Forgot Password?", new_password_url %>
+    <%= link_to t('.forgot_password'), new_password_url %>
   </div>
 <% form_for :session, :url => session_path do |form| %>
   <div class="text_field">
@@ -15,6 +15,6 @@
     <%= form.password_field :password %>
   </div>
   <div class="form_bottom">
-    <%= form.submit "Sign in", :disable_with => "Please wait..." %>
+    <%= form.submit t(:sign_in), :disable_with => t(:please_wait) %>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
-<% @title = "search" %>
+<% @title = t(:search) %>
 <% if @gems %>
-  <% @subtitle = "for <em>#{h(params[:query])}</em>" %>
+  <% @subtitle = t('.subtitle') %>
   <% if @exact_match %>
     <p>Exact match</p>
     <div class="gems border">
