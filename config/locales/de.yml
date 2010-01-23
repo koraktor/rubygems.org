@@ -1,12 +1,9 @@
 de:
   all_gems:          "alle gems"
-  dashboard:         "dashboard"
-  home:              "Startseite"
-  logout:            "abmelden"
+  downloads:         "Downloads"
   please_wait:       "Bitte warten..."
   rubyforge_account: "Du kannst dich jetzt auch mit deinem <a href=\"http://update.gemcutter.org/2009/12/10/rubyforge-accounts-migrated.html\">RubyForge-Account</a> anmelden!"
   search:            "Suche"
-  search_gems:       "Gems durchsuchen&hellip;"
   sign_in:           "anmelden"
   sign_up:           "registrieren"
 
@@ -28,6 +25,19 @@ de:
       most_downloaded: "Am meisten runtergeladen"
       new_gems:        "Neue Gems"
 
+  layouts:
+    application:
+      dashboard:    "dashboard"
+      designed_by:  "designt von"
+      home:         "Startseite"
+      logout:       "abmelden"
+      search_gems:  "Gems durchsuchen&hellip;"
+      supported_by: "unterstützt von"
+
+  ownership:
+    errors:
+      cant_delete_last: "Kann nicht den letzten Besitzer eines Gems löschen."
+
   profiles:
     show:
       api_key:         "Dein API-Schlüssel ist <strong>{{api_key}}</strong>"
@@ -39,10 +49,41 @@ de:
       your_gravatar:   "Dein Gravatar"
       your_profile:    "Dein Profil"
 
+  rubygem:
+    errors:
+      must_be_string:      "muss ein String sein"
+      must_include_letter: "must mindestens einen Buchstaben enthalten"
+      no_special_chars:    "darf nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten"
+
+  rubygems:
+    dependencies:
+      development: "Entwicklungsabhängigkeiten"
+      runtime:     "Laufzeitabhängigkeiten"
+    index:
+      starting_with: "die mit <em>{{letter}}</em> beginnen"
+    show:
+      authors:           "Autoren"
+      bug_tracker:       "Bug Tracker"
+      documentation:     "Dokumentation"
+      download:          "Herunterladen"
+      downloads:
+        this_version:    "für diese Version"
+        total:           "Downloads insgesamt"
+      edit:              "Bearbeiten"
+      homepage:          "Homepage"
+      install:           "installieren"
+      mailing_list:      "Mailliste"
+      show_all_versions: "Alle Versionen anzeigen (insgesamt {{count}})"
+      source_code:       "Quellcode"
+      subscribe:         "Abonnieren"
+      unsubscribe:       "Abo kündigen"
+      versions:          "Versionen"
+      wiki:              "Wiki"
+
   searches:
     new:
       exact_match: "Exakte Treffer"
-      subtitle:    "für <em>#{h(params[:query])}</em>"
+      subtitle:    "nach <em>{{query}}</em>"
 
   sessions:
     new:
@@ -52,16 +93,31 @@ de:
   users:
     new:
       already_registered: "Hast du bereits einen Account?"
-      
       sign_up:            "Registrieren"
-      
+
+  version:
+    errors:
+      already_exists:       "Eine Version mit dieser Nummer oder Plattform existiert bereits."
+      must_be_string_array: "muss ein Array von Strings sein"
+    no_description: "Dieses Rubygem hat keine Beschreibung oder Zusammenfassung."
+
   versions:
     index:
       all_versions:   "alle versionen von {{gem}}"
       versions_since: "{{count}} Versionen seit {{first_date}}"
 
+  web_hook:
+    created:  "Webhook für {{gem}} auf {{url}} erfolgreich erstellt"
+    deployed: "Webhook für {{gem}} auf {{url}} erfolgreich deployt"
+    errors:
+      already_registered:        "Es wurde bereits ein Hook für {{url}} für {{gem}} registriert"
+      already_registered_global: "Es wurde bereits ein globaler Hook für {{url}} registriert"
+      user_required:             "Für diesen Hook wird ein Benutzer benötigt"
+    failed:   "Beim Deploy des Webhooks für {{gem}} auf {{url}} ist ein Problem aufgetreten"
+    removed:  "Webhook für {{gem}} auf {{url}} erfolgreich entfernt"
+
   time_ago: "vor {{time}}"
-  
+
   date:
     formats:
       default: "%d. %m. %Y"
@@ -73,7 +129,7 @@ de:
 
     month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
     abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
-  
+
   datetime:
     distance_in_words:
       half_a_minute: "eine halbe Minute"

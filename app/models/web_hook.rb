@@ -16,16 +16,16 @@ class WebHook < ActiveRecord::Base
       if WebHook.exists?(:user_id    => user.id,
                          :rubygem_id => rubygem.id,
                          :url        => url)
-        errors.add_to_base("A hook for #{url} has already been registered for #{rubygem.name}")
+        errors.add_to_base I18n.t(:"web_hook.errors.already_registered", :gem => rubygem.name, :url => url)
       end
     elsif user
       if WebHook.exists?(:user_id    => user.id,
                          :rubygem_id => nil,
                          :url        => url)
-        errors.add_to_base("A global hook for #{url} has already been registered")
+        errors.add_to_base I18n.t(:"web_hook.errors.already_registered_global", :url => url)
       end
     else
-      errors.add_to_base("A user is required for this hook")
+      errors.add_to_base I18n.t(:"web_hook.errors.user_required")
     end
   end
 
@@ -46,19 +46,19 @@ class WebHook < ActiveRecord::Base
   end
 
   def success_message
-    "Successfully created webhook for #{what} to #{url}"
+    I18n.t(:"web_hook.created", :gem => what, :url => url)
   end
 
   def removed_message
-    "Successfully removed webhook for #{what} to #{url}"
+    I18n.t(:"web_hook.removed", :gem => what, :url => url)
   end
 
   def deployed_message
-    "Successfully deployed webhook for #{what} to #{url}"
+    I18n.t(:"web_hook.deployed", :gem => what, :url => url)
   end
 
   def failed_message
-    "There was a problem deploying webhook for #{what} to #{url}"
+    I18n.t(:"web_hook.failed", :gem => what, :url => url)
   end
 
   def what
@@ -67,7 +67,7 @@ class WebHook < ActiveRecord::Base
     elsif rubygem
       rubygem.name
     else
-      "all gems"
+      t(:all_gems)
     end
   end
 

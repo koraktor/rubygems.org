@@ -25,7 +25,7 @@ class Rubygem < ActiveRecord::Base
     :limit      => 1 }
   }
   named_scope :search, lambda { |query| {
-    :conditions => ["(name ilike :query or versions.description ilike :query) and versions_count > 0",
+    :conditions => ["(name like lower(:query) or versions.description like lower(:query)) and versions_count > 0",
       {:query => "%#{query.strip}%"}],
     :include    => [:versions],
     :order      => "rubygems.downloads desc" }
@@ -33,11 +33,11 @@ class Rubygem < ActiveRecord::Base
 
   def validate
     if name.class != String
-      errors.add :name, "must be a String"
+      errors.add :name, I18n.t(:"rubygem.errors.must_be_string")
     elsif name =~ /^[\d]+$/
-      errors.add :name, "must include at least one letter"
+      errors.add :name, I18n.t(:"rubygem.errors.must_include_letter")
     elsif name =~ /[^\d\w\-\.]/
-      errors.add :name, "can only include letters, numbers, dashes, and underscores"
+      errors.add :name, I18n.t(:"rubygem.errors.no_special_chars")
     end
   end
 

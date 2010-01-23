@@ -34,11 +34,11 @@ class Version < ActiveRecord::Base
     if Version.exists?(:rubygem_id => rubygem_id,
                        :number     => number,
                        :platform   => platform)
-      errors.add_to_base("A version already exists with this number or platform.")
+      errors.add_to_base I18n.t(:"version.errors.already_exists")
     end
 
     if !authors.is_a?(Array) || authors.any? { |a| !a.is_a?(String) }
-      errors.add :authors, "must be an Array of Strings"
+      errors.add :authors, I18n.t(:"version.errors.must_be_string_array")
     end
   end
 
@@ -86,7 +86,7 @@ class Version < ActiveRecord::Base
   end
 
   def info
-    [ description, summary, "This rubygem does not have a description or summary." ].detect(&:present?)
+    [ description, summary, I18n.t(:"version.no_description") ].detect(&:present?)
   end
 
   def update_attributes_from_gem_specification!(spec)

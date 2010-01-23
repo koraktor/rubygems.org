@@ -1,5 +1,5 @@
-<% @title = "all gems" %>
-<% @subtitle = "starting with <em>#{params[:letter]}</em>" %>
+<% @title = t(:all_gems) %>
+<% @subtitle = t('.starting_with', :letter => params[:letter]) %>
 <div class="directory border">
   <ol>
     <% ("A".."Z").each do |letter| %><li><%= link_to(letter, rubygems_path(:letter => letter)) %></li><% end %>

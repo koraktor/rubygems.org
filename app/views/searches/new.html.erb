@@ -1,8 +1,8 @@
 <% @title = t(:search) %>
 <% if @gems %>
-  <% @subtitle = t('.subtitle') %>
+  <% @subtitle = t('.subtitle', :query => h(params[:query])) %>
   <% if @exact_match %>
-    <p>Exact match</p>
+    <p><%= t('.exact_match') %></p>
     <div class="gems border">
       <ol>
         <%= render @exact_match %>

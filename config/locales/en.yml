@@ -1,12 +1,9 @@
 en:
   all_gems:          "all gems"
-  dashboard:         "dashboard"
-  home:              "Home"
-  logout:            "logout"
+  downloads:         "downloads"
   please_wait:       "Please wait..."
   rubyforge_account: "You can now sign in with your <a href=\"http://update.gemcutter.org/2009/12/10/rubyforge-accounts-migrated.html\">RubyForge Account too!</a>"
   search:            "search"
-  search_gems:       "Search gems&hellip;"
   sign_in:           "sign in"
   sign_up:           "sign up"
 
@@ -28,6 +25,19 @@ en:
       most_downloaded: "Most Downloaded"
       new_gems:        "New Gems"
 
+  layouts:
+    application:
+      dashboard:    "dashboard"
+      designed_by:  "designed by"
+      home:         "Home"
+      logout:       "logout"
+      search_gems:  "Search gems&hellip;"
+      supported_by: "supported by"
+
+  ownership:
+    errors:
+      cant_delete_last: "Can't delete last owner of a gem."
+
   profiles:
     show:
       api_key:         "Your API key is <strong>{{api_key}}</strong>"
@@ -39,11 +49,42 @@ en:
       your_gravatar:   "Your Gravatar"
       your_profile:    "Your Profile"
 
+  rubygem:
+    errors:
+      must_be_string:      "must be a String"
+      must_include_letter: "must include at least one letter"
+      no_specialchars:     "can only include letters, numbers, dashes and underscores"
+
+  rubygems:
+    dependencies:
+      development: "Development Dependencies"
+      runtime:     "Runtime Dependencies"
+    index:
+      starting_with: "starting with <em>{{letter}}</em>"
+    show:
+      authors:           "Authors"
+      bug_tracker:       "Bug Tracker"
+      documentation:     "Documentation"
+      download:          "Download"
+      downloads:
+        this_version:    "for this version"
+        total:           "total downloads"
+      edit:              "Edit"
+      homepage:          "Homepage"
+      install:           "install"
+      mailing_list:      "Mailing List"
+      show_all_versions: "Show all versions ({{count}} total)"
+      source_code:       "Source Code"
+      subscribe:         "Subscribe"
+      unsubscribe:       "Unsubscribe"
+      versions:          "Versions"
+      wiki:              "Wiki"
+
   searches:
     new:
       exact_match: "Exact match"
-      subtitle:    "for <em>#{h(params[:query])}</em>"
-      
+      subtitle:    "for <em>{{query}}</em>"
+
   sessions:
     new:
       forgot_password: "Forgot password?"
@@ -54,9 +95,25 @@ en:
       already_registered: "Already have an account?"
       sign_up:            "Sign up"
 
+  version:
+    errors:
+      already_exists:       "A version already exists with this number or platform."
+      must_be_string_array: "must be an Array of Strings"
+    no_description: "This rubygem does not have a description or summary."
+
   versions:
     index:
       all_versions:   "all versions of {{gem}}"
       versions_since: "{{count}} versions since {{first_date}}"
+
+  web_hook:
+    created:  "Successfully created webhook for {{gem}} to {{url}}"
+    deployed: "Successfully deployed webhook for {{gem}} to {{url}}"
+    errors:
+      already_registered:        "A hook for {{url}} has already been registered for {{gem}}"
+      already_registered_global: "A global hook for {{url}} has already been registered"
+      user_required:             "A user is required for this hook"
+    failed:   "There was a problem deploying webhook for {{gem}} to {{url}}"
+    removed:  "Successfully removed webhook for {{gem}} to {{url}}"
 
   time_ago: "{{time}} ago"

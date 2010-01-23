@@ -8,7 +8,7 @@
 <% else %>
 
   <div id="admin">
-    <%= link_to "Edit", edit_rubygem_path(@rubygem), :id => "edit" if @rubygem.owned_by?(current_user) %>
+    <%= link_to t(:'.edit'), edit_rubygem_path(@rubygem), :id => "edit" if @rubygem.owned_by?(current_user) %>
     <%= subscribe_link(@rubygem) %>
     <%= unsubscribe_link(@rubygem) %>
     <%= download_link(@latest_version) %>
@@ -21,7 +21,7 @@
   <div class="border">
     <%= clippy(@latest_version.to_install) %>
     <div class="install">
-      <div class="instructions"><strong>install</strong><span><%= @latest_version.to_install %></span></div>
+      <div class="instructions"><strong><%= t(:".install") %></strong><span><%= @latest_version.to_install %></span></div>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
     <div class="meta">
       <div class="top">
         <div class="authors">
-          <h5>Authors</h5>
+          <h5><%= t(:".authors") %></h5>
           <% if @latest_version.authors.present? %>
             <p><%=h @latest_version.authors %></p>
           <% else %>
@@ -38,32 +38,32 @@
         </div>
 
         <div class="downloads">
-          <strong><%= number_with_delimiter(@rubygem.downloads) %></strong> total downloads
+          <strong><%= number_with_delimiter(@rubygem.downloads) %></strong> <%= t(:".downloads.total") %>
         </div>
         <div class="downloads">
-          <strong><%= number_with_delimiter(@latest_version.downloads_count) %></strong> for this version
+          <strong><%= number_with_delimiter(@latest_version.downloads_count) %></strong> <%= t(:".downloads.this_version") %>
         </div>
       </div>
 
       <% unless @rubygem.linkset.empty? %>
         <div class="links">
           <h5>Links</h5>
-          <%= link_to_page "Homepage", @rubygem.linkset.home %>
-          <%= link_to_page "Source Code", @rubygem.linkset.code %>
-          <%= link_to_page "Documentation", @rubygem.linkset.docs %>
-          <%= link_to_page "Wiki", @rubygem.linkset.wiki %>
-          <%= link_to_page "Mailing List", @rubygem.linkset.mail %>
-          <%= link_to_page "Bug Tracker", @rubygem.linkset.bugs %>
+          <%= link_to_page t(:".homepage"), @rubygem.linkset.home %>
+          <%= link_to_page t(:".source_code"), @rubygem.linkset.code %>
+          <%= link_to_page t(:".documentation"), @rubygem.linkset.docs %>
+          <%= link_to_page t(:".wiki"), @rubygem.linkset.wiki %>
+          <%= link_to_page t(:".mailing_list"), @rubygem.linkset.mail %>
+          <%= link_to_page t(:".bug_tracker"), @rubygem.linkset.bugs %>
         </div>
       <% end %>
 
       <div class="versions">
-        <h5>Versions</h5>
+        <h5><%= t(:".versions") %></h5>
         <ol>
           <%= render @rubygem.versions.limited(5) %>
         </ol>
         <% if @rubygem.versions_count > 5 %>
-          <%= link_to "Show all versions (#{@rubygem.versions_count} total)", rubygem_versions_url(@rubygem), :class => "more" %>
+          <%= link_to t(:".show_all_versions", :count => rubygem.versions_count), rubygem_versions_url(@rubygem), :class => "more" %>
         <% end %>
       </div>
 
